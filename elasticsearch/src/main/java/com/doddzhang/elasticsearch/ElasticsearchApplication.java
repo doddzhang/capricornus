@@ -1,12 +1,12 @@
-package com.doddzhang.capricornus;
+package com.doddzhang.elasticsearch;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CapricornusApplication {
+public class ElasticsearchApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CapricornusApplication.class, args);
+		SpringApplication.run(ElasticsearchApplication.class, args);
 	}
 }
