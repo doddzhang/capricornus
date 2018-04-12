@@ -13,6 +13,7 @@
 
 	<modules>
 		<module>elasticsearch</module>
+		<module>eureka</module>
 		<module>eureka-client</module>
 		<module>eureka-consumer</module>
 		<module>config-client</module>
