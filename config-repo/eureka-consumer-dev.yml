@@ -4,6 +4,7 @@ management:
     security:
         enabled: false
 #解决refresh后，如果配置信息已经注入到bean中，由于bean是单例的，不会去加载修改后的配置
-endpoints:
-    restart:
-        enabled: true
+#弊端： 通过restart耗时比较长，因此就有了RefreshScope
+#endpoints:
+#    restart:
+#        enabled: true
