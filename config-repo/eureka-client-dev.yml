@@ -1,4 +1,5 @@
-mydata: eureka-client-dev-update
+mydata: eureka-client-dev
+#解决{"timestamp":1487113045770,"status":401,"error":"Unauthorized","message":"Full authentication is required to access this resource.","path":"/refresh"}
 management:
     security:
         enabled: false
