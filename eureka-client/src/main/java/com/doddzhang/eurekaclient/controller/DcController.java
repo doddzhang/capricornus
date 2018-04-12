@@ -1,5 +1,6 @@
 package com.doddzhang.eurekaclient.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -33,10 +34,20 @@ public class DcController {
     }
 
     @GetMapping("/dc")
+    @HystrixCommand(fallbackMethod = "fallback")
     public String dc() {
+        try {
+            Thread.sleep(5000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         String services = "Services: " + discoveryClient.getServices();
         System.out.println(services);
         return services;
+    }
+
+    public String fallback() {
+        return "fallback";
     }
 
     @RestController
