@@ -5,6 +5,8 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/doddzhang/capricornus/config-repo/
+          uri: https://github.com/doddzhang/capricornus.git
+          search-paths: config-repo
+          timeout: 60
 server:
   port: 1201
