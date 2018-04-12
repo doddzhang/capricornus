@@ -1,1 +1,4 @@
 mydata: eureka-client-dev-update
+management:
+    security:
+        enabled: false

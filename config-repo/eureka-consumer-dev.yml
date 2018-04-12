@@ -1,1 +1,4 @@
 mydata: eureka-consumer-dev-update
+management:
+    security:
+        enabled: false
