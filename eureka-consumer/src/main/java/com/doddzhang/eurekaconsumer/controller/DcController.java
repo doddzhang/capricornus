@@ -2,6 +2,7 @@ package com.doddzhang.eurekaconsumer.controller;
 
 import com.doddzhang.eurekaconsumer.client.DcClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +24,14 @@ public class DcController {
     RestTemplate restTemplate;
     @Autowired
     DcClient dcClient;
+
+    @Value("${mydata}")
+    String mydata;
+
+    @GetMapping("/mydata")
+    public String mydata() {
+        return mydata;
+    }
 
     @GetMapping("/consumer")
     public String dc() {

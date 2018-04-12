@@ -1,4 +1,1 @@
-eureka:
-    client:
-        serviceUrl:
-            defaultZone: http://localhost:8866/eureka/
+mydata: eureka-consumer-dev

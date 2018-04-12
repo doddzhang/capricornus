@@ -3,9 +3,16 @@ spring:
     name: eureka-consumer
   cloud:
     config:
-      uri: http://localhost:1201/
+#      uri: http://localhost:1201/
       profile: dev
       label: master
+      discovery:
+          enabled: true
+          serviceId: config-client
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8866/eureka/
 
 server:
   port: 2101

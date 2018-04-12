@@ -1,6 +1,7 @@
 package com.doddzhang.eurekaclient.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +21,14 @@ public class DcController {
 
     @Autowired
     DiscoveryClient discoveryClient;
+
+    @Value("${mydata}")
+    String mydata;
+
+    @GetMapping("/mydata")
+    public String mydata() {
+        return mydata;
+    }
 
     @GetMapping("/dc")
     public String dc() {

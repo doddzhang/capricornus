@@ -8,5 +8,10 @@ spring:
           uri: https://github.com/doddzhang/capricornus.git
           search-paths: config-repo
           timeout: 60
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8866/eureka/
 server:
   port: 1201
