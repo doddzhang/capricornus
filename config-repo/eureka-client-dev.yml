@@ -1,5 +1,6 @@
 mydata: eureka-client-dev
 #解决{"timestamp":1487113045770,"status":401,"error":"Unauthorized","message":"Full authentication is required to access this resource.","path":"/refresh"}
+#在调用health时，只返回一个状态，关闭这个敏感信息后，就可以显示其他详细信息
 management:
     security:
         enabled: false
