@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/doddzhang/capricornus/config-repo/
+server:
+  port: 1201

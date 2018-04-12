@@ -15,6 +15,7 @@
 		<module>elasticsearch</module>
 		<module>eureka-client</module>
 		<module>eureka-consumer</module>
+		<module>config-client</module>
 	</modules>
 
 	<parent>
