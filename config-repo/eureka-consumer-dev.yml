@@ -1,4 +1,4 @@
-mydata: eureka-consumer-dev
+mydata: eureka-consumer-dev-update
 #解决{"timestamp":1487113045770,"status":401,"error":"Unauthorized","message":"Full authentication is required to access this resource.","path":"/refresh"}
 management:
     security:
