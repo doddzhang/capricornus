@@ -9,3 +9,22 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8866/eureka/
+
+
+#单实例配置：通过一组zuul.routes.<route>.path与zuul.routes.<route>.url参数对的方式配置
+#zuul.routes.user-service.path=/user-service/**
+#zuul.routes.user-service.url=http://localhost:8080/
+
+#多实例配置：通过一组zuul.routes.<route>.path与zuul.routes.<route>.serviceId参数对的方式配置
+#zuul.routes.user-service.path=/user-service/**
+#zuul.routes.user-service.serviceId=user-service
+#ribbon.eureka.enabled=false
+#user-service.ribbon.listOfServers=http://localhost:8080/,http://localhost:8081/
+
+#它实现了对符合/user-service/**规则的请求路径转发到名为user-service的服务实例上去的路由规则。其中<route>可以指定为任意的路由名称
+#zuul.routes.user-service.path=/user-service/**
+#zuul.routes.user-service.serviceId=user-service
+
+
+#还有一种更简洁的配置方式：zuul.routes.<serviceId>=<path>
+#zuul.routes.user-service=/user-service/**
